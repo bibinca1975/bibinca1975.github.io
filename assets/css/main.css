@@ -1914,7 +1914,10 @@ section,
 .service-details ul li {
   padding: 5px 0;
   display: flex;
-  align-items: center;
+ 
+}
+#innerPageMain .bi-check-circle::before {
+   vertical-align: unset;
 }
 
 .service-details ul i {
