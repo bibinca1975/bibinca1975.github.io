@@ -5,24 +5,27 @@
   --heading-font: "Source Sans Pro",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 }
-
+ 
  :root { 
   --background-color: #ffffff; 
+  --head-bgcolor: #1a1032; 
   --default-color: #1a1f24;  
   --heading-color: #485664;  
   /* --accent-color: #0ea2bd;    */
-  --accent-color: #1432a2;   
+  --accent-color: #1a1032;   
   --surface-color: #ffffff;  
   --contrast-color: #ffffff; 
+  --skybluecolor: #17d1f8;
+  --pinkcolor: #ff9ad2;
+  --footertxt: #dddddd;
 }
 
  :root {
   --nav-color: #485664;   
-  /* --nav-hover-color: #0ea2bd;   */
-   /* --nav-dropdown-hover-color: #0ea2bd;    */
+ 
 
-   --nav-dropdown-hover-color: #1432a2; 
-  --nav-hover-color: #1432a2;  
+   --nav-dropdown-hover-color: #1a1032; 
+  --nav-hover-color: #1a1032;  
   --nav-mobile-background-color: #ffffff;  
   --nav-dropdown-background-color: #ffffff;   
   --nav-dropdown-color: #485664;  
@@ -214,19 +217,18 @@ h6 {
 
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--head-bgcolor);
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;height: 80px;
 }
 
 .header .logo {
-  line-height: 1;
+  line-height: 1;width: 55%;
 }
 
 .header .logo img {
-  max-height: 36px;
-  margin-right: 8px;
+   margin-right: 8px;width: 100%;
 }
 
 .header .logo h1 {
@@ -238,20 +240,19 @@ h6 {
 
 .header .logo span {
   color: var(--accent-color);
-  font-weight: 400;
-  font-size: 34px;
-  margin-left: 2px;
+    margin-left: 2px;
+  width: 25%;
 }
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
-  color: var(--contrast-color);
+  color: #dddddd;
   background: var(--accent-color);
   font-size: 14px;
   padding: 8px 26px;
   margin: 0;
   border-radius: 4px;
-  transition: 0.3s;
+  transition: 0.3s;    border: 1px solid #ddd
 }
 
 .header .btn-getstarted:hover,
@@ -312,8 +313,8 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
-    font-size: 15px;
+    color: #dddddd;
+    font-size: 14px;
     padding: 0 2px;
     font-family: var(--nav-font);
     font-weight: 400;
@@ -340,7 +341,7 @@ h6 {
     height: 2px;
     bottom: -6px;
     left: 0;
-    background-color: var(--nav-hover-color);
+    background-color: var(--pinkcolor);
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
@@ -356,7 +357,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: var(--pinkcolor);
   }
 
   .navmenu .dropdown ul {
@@ -554,8 +555,7 @@ h6 {
 .footer .footer-top {
   /* background-color: color-mix(in srgb, var(--background-color), white 5%);
   padding-top: 50px; */
-  background-color: 
-  color-mix(in srgb, #cbc8c8, white 5%);
+  background-color: var(--head-bgcolor);
       padding-top: 50px;
 }
 
@@ -587,7 +587,7 @@ h6 {
   font-weight: 600;
   position: relative;
   padding-bottom: 12px;
-  margin-bottom: 15px;    color: var(--nav-color);
+  margin-bottom: 15px;    color: var(--footertxt);
 }
 
 .footer h4::after {
@@ -629,10 +629,10 @@ h6 {
 }
 
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--footertxt), transparent 30%);
   display: inline-block;
   line-height: 1;
-  color: var(--nav-color);
+  color: var(--footertxt);
 }
 
 .footer .footer-links ul a:hover {
@@ -640,7 +640,7 @@ h6 {
 }
 
 .footer .footer-contact p {
-  margin-bottom: 5px;    color: var(--nav-color);
+  margin-bottom: 5px;    color: var(--footertxt);
 }
 
 .footer .copyright {
@@ -1121,7 +1121,7 @@ section,
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action {
-  padding: 0;
+  padding: 0;padding-bottom: 30px;
 }
 
 .call-to-action .container {
@@ -2539,4 +2539,73 @@ section,
   font-size: 14px;
 }
 /*  */
+@media (max-width: 990px){
+  .hero h1 , .section-title h2,.about h3,.call-to-action .content h3,
+  .onfocus .content h3,.features .tab-pane h3,.contact .info h3, .service-details h3, .page-title h1{ 
+    font-size: 25px;
+  }
+  p,.call-to-action .content p,.onfocus .content ul li,.onfocus .content ul i,
+  .features .nav-link h4, .features .tab-pane ul li, .features .tab-pane ul i,
+  .contact .info p, .contact .info-item h4, .contact .info-item p, .service-details p,
+  .service-details ul i,.service-details ul,.service-details .services-list a{
+    font-size: 14px;
+  }
+  .about .nav-link,.about .tab-content h4 {
+     font-size: 16px;  
+  }
+  .about .nav-link { 
+   padding: 5px 0;
+ }
+ .onfocus .content .read-more {
+   font-size: 14px;
+   padding: 8px 18px;display: flex;
+}
+.section-title {
+   padding-bottom: 30px;
+}
+.features .nav-link {
+  padding: 15px 10px;
+  font-size: 14px;
+}
+.contact .info-item+.info-item {
+  padding-top: 8px;
+  margin-top: 8px;
+}
+.contact .info-item i {
+  font-size: 20px; 
+  margin-right: 15px;
+}
+.page-title {
+ 
+  padding: 8px 0;
+}
+.service-details ul i {
+ 
+  margin-top: 2px;
+}
+.navmenu a, .navmenu a:focus {
+   padding: 8px 20px;
+   font-size: 14px;
+}
+.section-title h2{
+  margin-bottom: 10px;
+}
+}
+@media (max-width: 767px){
+  .hero h1 , .section-title h2,.about h3,.call-to-action .content h3,
+  .onfocus .content h3,.features .tab-pane h3,.contact .info h3, .service-details h3, .page-title h1{ 
+    font-size: 20px;
+  }
+  .section-title {
+    padding-bottom: 15px;
+}
+}
+@media (max-width: 360px){
+  .header .btn-getstarted {
+ 
+    padding: 6px 10px;
+}
+}
 
+/* ================================= */
+ 
