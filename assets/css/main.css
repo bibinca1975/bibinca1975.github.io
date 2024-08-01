@@ -432,7 +432,7 @@ h6 {
     color: var(--nav-color);
     font-size: 28px;
     line-height: 0;
-    margin-right: 10px;
+    margin-right: 0px;
     cursor: pointer;
     transition: color 0.3s;
   }
@@ -963,8 +963,22 @@ section,
   .hero .btn-watch-video {
     font-size: 13px;
   }
+  body .hero h1 {
+    margin: 0 0 0px 0;
+    font-size: 20px; 
+    right: 15px !important; 
+    line-height: unset !important;
+  }
+  .header {
+    
+    height: 60px;
+}
+body .hero h1 {
+   font-size: 18px !important;
+}
 }
 
+ 
 @keyframes up-down {
   0% {
     transform: translateY(10px);
@@ -1135,7 +1149,7 @@ section,
     padding: 20px;
   }
 }
-
+ 
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
@@ -2646,13 +2660,20 @@ color-mix(in srgb, var(--default-color), transparent 70%); */
   .header .logo {
     width: 36% !important;
 }
-
+.hero {
+   min-height: auto;
+}
 }
 @media (max-width: 425px){
   body .header .logo {
     width: 40% !important;
 }
-
+body .hero h1 {
+  margin: 0 0 0px 0;
+  font-size: 20px; 
+  right: 15px !important; 
+  line-height: unset !important;
+}
 }
 
 
